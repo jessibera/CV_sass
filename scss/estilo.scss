@@ -1,0 +1,123 @@
+//Colores
+$gris: #cccccc;
+$blanco: #FFF;
+$opuesto: #B59292;
+
+//Valores de color por defecto
+$header-background: $opuesto;
+$body-background: $gris;
+
+//Características de los enlaces según lo correspondiente
+$link-normal: #000;
+$raton-enlace: #946C6C;
+
+//Crear mixin para centrar objetos
+@mixin center($width: null, $height:null){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//Añadir nuevas fuentes de estilo, para dislexicos
+@font-face {
+    font-family: 'Dyslexic-Bold';
+    src: url(open_dyslexic/OpenDyslexicAlta-Bold.otf) format('opentype');
+}
+
+//Formato para la fuente
+$subrayado: underline;
+$margin: 2em;
+$padding: 1em;
+$tamano-grande: 150%;
+$tamano-mediano: 110%;
+
+//Formato para las listas
+$lista-tipo: none;
+
+//Valores para la tabla
+$pantalla-completa: 100%;
+$borde: solid 0.1em black;
+$negrita: bold;
+
+//-------------------------------------------------------
+
+/*Formato enlace dislexicos*/
+#fuente{
+    @include center;
+    text-decoration: $subrayado;
+}
+
+/*Formato fuente body*/
+body{
+    background-color: $body-background;
+    margin: $margin;
+}
+
+/*Elementos de la cabecera*/
+header{
+    @include center;
+    font-size: $tamano-grande;
+    font-weight: $negrita;
+    background-color: $header-background;
+}
+
+#container1{
+    padding: $padding;
+    background-color: $blanco;
+    width: 50%;
+    margin: auto;
+    
+}
+
+/*Formato de los enunciados - Anidamiento básico*/
+h4{
+    color: $link-normal;
+    &:hover{
+        color: $raton-enlace;
+        font-size: $tamano-mediano;
+    }
+}
+
+/*Formato datos personales*/
+
+.enunciado, .datos{
+    list-style-type: $lista-tipo;
+    padding: $padding;
+}
+
+.enunciado{
+    font-weight: $negrita;
+    width: 20%;
+    float: left;
+}
+
+.datos{
+    width: 50%;
+    float: left;
+}
+
+.foto{
+    img{
+        width: 15%;
+    }
+}
+
+/*Formato para las tablas*/
+table{
+    width: $pantalla-completa;
+    tr{
+        td{
+            border: $borde;
+        }
+        td:nth-child(1){
+            font-weight: $negrita;
+            background-color: $header-background;
+        }
+    }
+}
+
+/*Formato listado*/
+ul{
+    list-style-type: $lista-tipo;
+    padding: 0;
+}

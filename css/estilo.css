@@ -1,0 +1,85 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Dyslexic-Bold";
+  src: url(open_dyslexic/OpenDyslexicAlta-Bold.otf) format("opentype");
+}
+/*Formato enlace dislexicos*/
+#fuente {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: underline;
+}
+
+/*Formato fuente body*/
+body {
+  background-color: #cccccc;
+  margin: 2em;
+}
+
+/*Elementos de la cabecera*/
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 150%;
+  font-weight: bold;
+  background-color: #B59292;
+}
+
+#container1 {
+  padding: 1em;
+  background-color: #FFF;
+  width: 50%;
+  margin: auto;
+}
+
+/*Formato de los enunciados - Anidamiento básico*/
+h4 {
+  color: #000;
+}
+h4:hover {
+  color: #946C6C;
+  font-size: 110%;
+}
+
+/*Formato datos personales*/
+.enunciado, .datos {
+  list-style-type: none;
+  padding: 1em;
+}
+
+.enunciado {
+  font-weight: bold;
+  width: 20%;
+  float: left;
+}
+
+.datos {
+  width: 50%;
+  float: left;
+}
+
+.foto img {
+  width: 15%;
+}
+
+/*Formato para las tablas*/
+table {
+  width: 100%;
+}
+table tr td {
+  border: solid 0.1em black;
+}
+table tr td:nth-child(1) {
+  font-weight: bold;
+  background-color: #B59292;
+}
+
+/*Formato listado*/
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/*# sourceMappingURL=estilo.css.map */
